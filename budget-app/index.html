@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="toggle-dark" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
+        <h1>💰 Smart Budget Tracker </h1>
+        <section class="input-section">
+            <label>Monthly Income: ₹<input type="number" id="income" /></label>
+
+        <h2>Add Expense</h2>
+      <input type="text" id="category" placeholder="Category (e.g. Food)" />
+      <input type="number" id="amount" placeholder="Amount" />
+      <input type="date" id="date" />
+      <button onclick="addExpense()">➕ Add Expense</button>
+    </section>
+
+    <section class="summary">
+      <canvas id="categoryChart" width="400" height="200"></canvas>
+      <canvas id="savingsChart" width="400" height="200"></canvas>
+
+      <h2>Expense Summary</h2>
+      <ul id="expense-list"></ul>
+      <p><strong>Total Monthly Expense:</strong> ₹<span id="total-expense">0</span></p>
+      <p><strong>Monthly Savings:</strong> ₹<span id="monthly-savings">0</span></p>
+      <p><strong>Estimated Yearly Savings:</strong> ₹<span id="yearly-savings">0</span></p>
+    </section>
+
+     <section class="review">
+      <h2>🧠 Spending Review</h2>
+      <p id="review-text"></p>
+    </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+ <script src="script.js"></script>  
+</body>
+</html>

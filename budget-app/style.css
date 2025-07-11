@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+:root {
+  --bg: #f4f4f4;
+  --text: #000;
+  --card: #fff;
+  --button-bg: #007bff;
+  --button-text: #fff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card: #1e1e1e;
+  --button-bg: #333;
+  --button-text: #0f0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  background: var(--card);
+  transition: background 0.3s;
+}
+
+button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
+input {
+  background: #fff;
+  color: #000;
+}
+
+body.dark input {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li.animate {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.4s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#review-text {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+canvas {
+  animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
